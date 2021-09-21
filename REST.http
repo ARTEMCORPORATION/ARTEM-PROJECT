@@ -1,0 +1,56 @@
+### Solicitud de post por id de usuario
+GET http://localhost:5000/api/post/usuarios
+
+
+### Solicitud de post por id de post
+GET http://localhost:5000/api/post/usuarios
+
+### POST creacion de post
+POST http://localhost:5000/api/post HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQzODA4M2Q4MDUxOWMxYmMyMzFlMTUiLCJlbWFpbCI6ImpvZWxyaXF1ZWxtZUBnbWFpbC5jb20iLCJpYXQiOjE2MzIwOTMwMzIsImV4cCI6MTYzMjA5NjYzMn0.H-01MWUyG8YyINLmkSAwMrELKVlDUdyqN3ijHUNhC7w
+
+{
+    "nombre": "Excelente Tour",
+    "opinion":"La visita ha sido una experiencia increible,habra que repetir",
+    "recomendacion":"true",
+    "creador": "61438083d80519c1bc231e15"
+}
+
+### Actualizacion de post
+PATCH http://localhost:5000/api/post/ HTTP/1.1
+Content-Type: application/json
+
+{
+    //Editar informacion del post.
+}
+
+### Eliminacion de post por su id
+DELETE http://localhost:5000/api/post/
+
+
+
+
+
+### Lista de usuarios
+GET http://localhost:5000/api/Usuarios
+
+### POST crear usuarios
+POST http://localhost:5000/api/Usuarios/alta HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Joel Riquelme",
+    "email": "joelriquelme@gmail.com",
+    "password": "123456"
+
+}
+
+### POST login usuarios
+POST  http://localhost:5000/api/usuarios/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "joelriquelme@gmail.com",
+    "password": "123456"
+}
